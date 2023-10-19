@@ -1,3 +1,4 @@
+<h1>CHEGUEI AQUI</h1>
 <?php
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $nome = $_POST["nome"];
@@ -6,7 +7,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $mensagem = $_POST["mensagem"];
 
     // Configurações de email
-    $destinatario = "contato.nathaliacaldonho@gmail.com"; // Substitua pelo seu endereço de email
+    $destinatario = "contato.nathaliacaldonho@gmail.com"; // endereço que vai chegar as mensagens
     $assunto = "Nova mensagem do formulário de contato - NMC - DEV";
 
     // Monta o corpo da mensagem
