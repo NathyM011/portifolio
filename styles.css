@@ -1,0 +1,391 @@
+/*ESTILO GERAL*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+.logo{
+    image-resolution: 200px;
+}
+
+body{
+    background-color: #DCDCDC;
+    height: 100vh;
+}
+
+.interface{
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+.flex{
+    display: flex;
+}
+
+.btn-contato button{
+    padding: 10px 40px;
+    font-size: 18px;
+    font-weight: 700;
+    background-color: whitesmoke;
+    border: 0;
+    border-radius: 30px;
+    cursor: pointer;
+}
+
+.btn-contato button:hover{
+    box-shadow: 0px 0px 8px rgb(245, 245, 245);
+    transform: scale(1.10);
+    transition: 0.5s;
+}
+
+h2.titulo{
+    color: black;
+    font-size: 30px;
+    text-align: center;
+}
+
+h2.titulo span{
+    color:cadetblue;
+}
+
+
+/*ESTILO DO CABEÇALHO*/
+header{
+    padding: 40px 4%;
+}
+
+header > .interface{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header a{
+    color: rgb(138, 116, 116);
+    text-decoration: none;
+    display: inline-block;
+}
+
+header nav ul{
+    list-style-type: none;
+}
+
+header nav.menu_desktop li{
+    display: inline-block;
+    padding: 0 40px;
+}
+
+header nav.menu_desktop li a:hover{
+    color: black;
+    transform: scale(1.20);
+    transition: .2s;
+}
+
+/*ESTILO DO MENU MOBILE*/
+/*necessário adicionar*/
+
+/*ESTILO DO TOPO DO SITE*/
+section.topo-do-site{
+    padding: 40px 4%;
+}
+
+section.topo-do-site .flex{
+    align-items: center;
+    justify-content: center;
+    gap:90px;
+}
+
+.img-topo-site img{
+    width: 500px; 
+    height: 500px; 
+    border-radius: 30%;
+}
+
+.topo-do-site .txt-topo-site h1{
+    font-size: 35px;
+    line-height: 35px;
+}
+
+.topo-do-site .txt-topo-site p{
+    margin: 40px 0px;
+    font-size: large;
+}
+
+.topo-do-site .img-topo-site img{
+    position: relative;
+    animation: flutuar 2s ease-in-out infinite alternate;
+}
+
+@keyframes flutuar {
+    0%{
+        top: 0;
+    }
+    100%{
+        top: 30px;
+    }
+}
+
+/*ESTILO DAS ESPECIALIDADES*/
+section.especialidades{
+    padding: 40px 4%;
+}
+
+section.especialidades .flex{
+    gap: 60px;
+}
+
+section.especialidades .especialidades-box{
+    color: black;
+    padding: 40px;
+    margin-top: 25px;
+    border-radius: 20px;
+    transition: 1s;
+}
+
+section.especialidades .especialidades-box:hover{
+    transform: scale(1.05);
+    box-shadow: 0 0 10px cadetblue;
+}
+
+section.especialidades .especialidades-box i{
+    font-size: 80px;
+    color: rgba(95, 158, 160, 0.575);
+}
+
+section.especialidades .especialidades-box p{
+    text-align: left;
+}
+
+section.especialidades .especialidades-box h3{
+    font-size: 26px;
+    margin: 15px 0px;
+}
+
+
+/*ESTILO DO SOBRE*/
+.img-sobre img{
+    width: 500px; 
+    height: 650px; 
+    border-radius: 15%;
+}
+
+section.sobre{
+    padding: 80px 4%;
+}
+
+section.sobre .flex{
+    align-items: center;
+    gap: 60px;
+} 
+
+.sobre .txt-sobre{
+    color: black;
+}
+
+.sobre .txt-sobre h2{
+    font-size: 30px;
+    line-height: 40px;
+    margin-bottom: 30px;
+}
+
+.sobre .txt-sobre h2 span{
+    color: cadetblue;
+}
+
+.sobre .txt-sobre p{
+    margin: 20px 0px;
+    text-align: justify;
+}
+
+.btn-social button{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: none;
+    background-color: cadetblue;
+    font-size: 30px;
+    cursor: pointer;
+    margin: 0 5px;
+    transition:0.5s;
+}
+
+.btn-social button:hover{
+    transform: scale(1.05);
+    box-shadow: 0 0 10px cadetblue;
+}
+
+/*ESTILO DO CONTATO*/
+section.formulario{
+    padding: 80px 4%;
+}
+
+form{
+    max-width: 500px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 40px;
+}
+
+form input, form textarea{
+    width: 100%;
+    background-color: rgba(95, 158, 160, 0.267);
+    border: 0;
+    outline: 0;
+    padding: 20px 15px;
+    border-radius: 15px;
+    color: black;
+    font-size: 18px;
+}
+
+form textarea{
+    resize: none;
+    max-height: 200px;
+}
+form .btn-enviar{
+    margin-top: 20px;
+    text-align: center;
+}
+
+form .btn-enviar input{
+    width: 120px;
+    background-color: cadetblue;
+    font-weight: 700;
+    transition: 1s;
+}
+
+form .btn-enviar input:hover{
+    transform: scale(1.05);
+    box-shadow: 0 0 10px cadetblue;
+}
+
+/* ESTILO DO RODAPÉ*/
+
+footer{
+    padding: 40px 4%;
+    margin-top: 100px;
+    box-shadow: 0 0 40px 10px rgba(95, 158, 160, 0.329);
+}
+
+footer .flex{
+    justify-content: space-between;
+}
+
+footer .line-footer{
+    padding: 20px 0;
+}
+
+.borda{
+    border-top: 2px solid cadetblue;
+}
+
+.borda a{
+    text-decoration: none;
+    margin-left: 20px;
+}
+
+footer .line-footer p i{
+    color: black;
+    font-size: 30px ;
+}
+
+footer .line-footer p a{
+    color: black;
+}
+
+footer .line-footer .logo-footer img{
+    width:250px;
+    height: 250px;
+    margin-top: 0;
+}
+
+/*RESPONSIVIDADE*/
+@media screen and (max-width: 1020px){
+
+    /*classes gerais*/
+    .flex{
+        flex-direction: column;
+    }
+    h2.titulo{
+        font-size: 25px;
+        line-height: 30px;
+    }
+
+    /*cabeçalho*/
+    .menu_desktop, .btn-contato{
+        display: none;
+    }
+
+    /*Topo do site*/
+
+    section.topo-do-site .flex{
+        gap:40px;
+    }
+    section.topo-do-site{
+        padding: 20px 8%;
+    }
+
+    .topo-do-site .txt-topo-site h1{
+        font-size: 20px;
+        line-height: 35px;
+        line-height:25px;
+    }
+
+    header .logo img{
+        width:100%;
+    }
+
+    .img-topo-site img{
+        width: 100%;
+        height: auto;
+    }
+
+    /*ESTILO DAS ESPECIALIDADES*/
+    section.especialidades{
+        padding: 40px 10%;
+    }
+
+    /*ESTILO DO SOBRE*/
+    .img-sobre img{
+        width: 100%; 
+        height: auto; 
+    }
+
+    section.sobre{
+        padding: 80px 8%;
+    }
+
+    .sobre .txt-sobre h2{
+        font-size:25px;
+        line-height: 30px;
+        text-align: center;
+    }
+
+    .btn-social{
+        text-align: center;
+    }
+
+    /*ESTILO DO CONTATO*/
+    form{
+        width:80%;
+    }
+
+    /*ESTILO DO RODAPÉ*/
+
+    footer .flex{
+        flex-direction: column;
+    }
+
+    footer .line-footer{
+        text-align: center;
+    }
+
+}

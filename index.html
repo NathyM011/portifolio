@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nathália Martins Caldonho</title>
+    <link rel="stylesheet" href="/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<!--CÓDIGO GOOGLE FONTES-->
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+<!--FIM GOOGLE FONTES-->
+<!--BOOTSTRAP ICONS-->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+<!--BOOTSTRAP ICONS-->
+<script src="menu.js" defer></script>
+</head>
+
+<body>
+    
+    <header>
+        <div class="interface">
+
+
+            <div class="logo">
+                <a href="#">
+                    <img src="/img/NMC-PhotoRoom.png-PhotoRoom.png" alt="logo">
+                </a>
+            </div><!--logo-->
+
+                <nav class="menu_desktop">
+                    <ul>
+                        <li><a href="#topo-do-site">Início</a></li>
+                        <li><a href="#especialidades">Especialidades</a></li>
+                        <li><a href="#sobre">Sobre</a></li>
+                     <!--<li><a href="#">Projetos</a></li>--> 
+                    </ul>
+                </nav>
+
+                <div class="btn-contato">
+                    <a href="#formulário">
+                        <button>Contato</button>
+                    </a>
+                </div>
+        </div> <!--interface-->
+    </header>
+
+    <main>
+        <section class="topo-do-site" id="topo-do-site">
+            <div class="interface">
+                <div class="flex">
+                    <div class="txt-topo-site">
+                        <h1>NAVEGANDO NO UNIVERSO WEB: A BÚSSOLA DA CURIOSIDADE NO DESENVOLVIMENTO<span>.</span></h1>
+                        <p>"Na vastidão das estrelas digitais, onde cada linha de código é uma constelação a ser desvendada, 
+                            a jornada pelo universo web se torna iluminada pela curiosidade, que serve como a bússola a guiar os desenvolvedores em sua exploração."</p>
+
+                        <div class="btn-contato">
+                            <a href="#formulário">
+                                <button>Entre em contato</button>
+                            </a>
+                        </div><!--btn-contato-->
+                    </div><!--txt-topo-site-->
+
+                    <div class="img-topo-site">
+                         <img src="/img/IMG_4035 (1).jpg" alt="">
+                    </div><!--img-topo-site-->
+                </div><!--flex-->
+
+            </div><!--interface-->
+        </section><!--Topo do site-->
+
+        <section class="especialidades" id="especialidades">
+
+            <div class="interface">
+                <h2 class="titulo">MINHAS <span>ESPECIALIDADES</span>.</h2>
+                <div class="flex">
+                    <div class="especialidades-box">
+                        <i class="bi bi-code-slash"></i>
+                        <h3>FRONT-END</h3>
+                        <P>Possui conhecimento nas tecnologias de desenvolvimento front-end, tais como o HTML, CSS, Bootstrap e React.</P>
+                    </div><!--especialidades-box-->
+                    <div class="especialidades-box">
+                        <i class="bi bi-wordpress"></i>
+                        <h3>WORDPRESS</h3>
+                        <P>Experiência em criação de sites utilizando Wordpress e plugins, tais como Elementor.</P>
+                    </div><!--especialidades-box-->
+                    <div class="especialidades-box">
+                        <i class="bi bi-braces"></i>                        
+                        <h3>LINGUAGENS</h3>
+                        <P>Conhecimento nas linguagens JavaScript, C#, PhP e Phyton</P>
+                    </div><!--especialidades-box-->
+                </div><!--flex-->
+            </div><!--interface-->
+
+        </section><!--Especialidades-->
+
+        <section class="sobre" id="sobre">
+            <div class="interface">
+                <div class="flex">
+                    <div class="img-sobre">
+                        <img src="/img/IMG_20231017_121648_925.jpg" alt="">
+                    </div><!--img-sobre-->
+                    <div class="txt-sobre">
+                        <h2>COM AS FERRAMENTAS DO CÓDIGO, EU SOU NATHÁLIA, <span>A ARQUITETA DO SEU MUNDO DIGITAL.</span></h2>
+                        <p>Me chamo Nathália Martins Caldonho, sou formada no curso técnico em informática pelo Instituto Federal do Espírito Santo - Campus de Alegre. Atualmente estou 
+                            cursando tecnologia em análise e desenvolvimento de sistemas, pelo mesmo Instituto. 
+                            Já atuei em projetos de extensão e iniciação científica voltados para o ramo da automação com microcontroladores. 
+                            Possuo formação em desenvolvimento de jogos eletrônicos utilizando a engine da Unity.
+                         </p>   
+                         <p> Minha paixão está na área do desenvolvimento web, utilizando tecnologias como HTML, CSS e JavaScript. Também sou familiarizada com alguns frameworks que 
+                            compõem a área, como Bootstrap, React e Angular. 
+                            Possuo conhecimento nas linguagens Java, C, C#, PhP, C++ e Phyton. 
+                        </p>
+                        <p>Embora eu seja uma recém-chegada no fascinante mundo da tecnologia, estou ansiosa para moldar meu conhecimento com as cores das novas experiências!</p>
+
+                        <div class="btn-social">
+                            <a href=""><button><i class="bi bi-instagram"></i></button></a>
+                            <a href=""><button><i class="bi bi-linkedin"></i></button></a>
+                            <a href=""><button><i class="bi bi-whatsapp"></i></button></a>
+                        </div><!--btn-social-->
+
+                    </div><!--txt-sobre-->
+                </div><!--flex-->
+            </div><!--interface-->
+        </section><!--sobre-->
+
+        <section class="formulário" id="formulário">
+            <div class="interface">
+                <h2 class="titulo">FALA <span>COMIGO</span>!</h2>
+                <form method="post" action="envia.php">
+                    <input type="text" name="nome" id="nome" placeholder="Digite seu nome" required>
+                    <input type="text" name="email" id="email" placeholder="Digite seu e-mail" required>
+                    <input type="text" name="telefone" id="telefone" placeholder="Digite seu celular">
+                    <textarea name="mensagem" id="mensagem" placeholder="Escreva sua mensagem" required></textarea>
+                    <div class="btn-enviar"><input type="submit" value="ENVIAR"></div>
+                </form>
+            </div><!--interface-->
+        </section><!--formulário-->
+    </main>
+
+    <footer>
+        <div class="interface">
+            <div class="line-footer">
+                <div class="flex">
+                    <div class="logo-footer">
+                        <img src="/img/NMC-PhotoRoom.png-PhotoRoom.png" alt="">
+                    </div><!--logo-footer-->
+                    <div class="btn-social">
+                        <a href="https://instagram.com/iluminnathi?igshid=OGQ5ZDc2ODk2ZA=="><button><i class="bi bi-instagram"></i></button></a>
+                        <a href="https://www.linkedin.com/in/nathalia-caldonho/"><button><i class="bi bi-linkedin"></i></button></a>
+                        <a href="https://wa.me/5528999055764"><button><i class="bi bi-whatsapp"></i></button></a>
+                    </div><!--btn-social-->
+                </div><!--flex-->
+            </div><!--line-footer-->
+            <div class="line-footer borda">
+                <p><i class="bi bi-envelope-paper"></i><a href="mailto:contato.nathaliacaldonho@gmail.com">contato.nathaliacaldonho@gmail.com</a></p>
+            </div><!--line-footer-->
+        </div><!--interface-->
+    </footer>
+
+</body>
+</html>
