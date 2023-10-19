@@ -1,9 +1,9 @@
 <?php
 
-    $nome = addcslashes($_POST['nome']);
-    $email = addcslashes($_POST['email']);
-    $telefone = addcslashes($_POST['telefone']);
-    $mensagem = addcslashes($_POST['mensagem']);
+    $nome = addslashes($_POST['nome']);
+    $email = addslashes($_POST['email']);
+    $telefone = addslashes($_POST['telefone']);
+    $mensagem = addslashes($_POST['mensagem']);
 
     $destinatario = "contato.nathaliacaldonho@gmail.com";
     $assunto = "Coleta de dados - NMC Web - Development";
