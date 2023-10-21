@@ -10,8 +10,9 @@ html{
     scroll-behavior: smooth;
 }
 
-.logo{
-    image-resolution: 200px;
+.logo img{
+    width: 200px;
+    height: 200px;
 }
 
 body{
@@ -26,6 +27,8 @@ body{
 
 .flex{
     display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .btn-contato button{
@@ -34,7 +37,7 @@ body{
     font-weight: 700;
     background-color: whitesmoke;
     border: 0;
-    border-radius: 30px;
+    border-radius: 15px;
     cursor: pointer;
 }
 
@@ -54,16 +57,59 @@ h2.titulo span{
     color:cadetblue;
 }
 
+main {
+    margin-top: 200px; /* Altura do cabeçalho fixo */
+}
+
 
 /*ESTILO DO CABEÇALHO*/
-header{
-    padding: 40px 4%;
+header {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: transparent; /* Altere para a cor de fundo desejada */
+    transition: background-color 0.5s; /* Adicione uma transição suave */
+    z-index: 1000; /* Certifique-se de que o menu fica na parte superior */
+}
+
+/*CONFIGURAÇÃO DO MENU FIXO*/
+.btn-abrir-menu{
+    display: none;
+}
+
+
+header.rolagem{
+    background-color: #DCDCDC; /* Cor de fundo quando rolar a página */
+    padding: 20px 4%;
+}
+
+header.rolagem .linha-menu {
+    opacity: 0;
 }
 
 header > .interface{
     display: flex;
     align-items: center;
     justify-content: space-between;
+}
+
+header .menu_desktop {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.linha-menu {
+    height: 2px;
+    background-color: whitesmoke;
+    position: absolute;
+    bottom: 0;
+    left: 20%;
+    right: 20%;
+    top: 210px; /* Ajuste esta linha para a distância desejada */
+    transform: translateY(-50%);
+    transition: opacity 0.2s;
 }
 
 header a{
@@ -88,11 +134,80 @@ header nav.menu_desktop li a:hover{
 }
 
 /*ESTILO DO MENU MOBILE*/
-/*necessário adicionar*/
+
+.menu-mobile {
+    display: none; /* Esconder o menu mobile */
+}
+.btn-abrir-menuMobile{
+    display: none;
+}
+
+
+.btn-abrir-menuMobile i {
+    color: rgba(95, 158, 160, 0.678);
+    font-size: 40px;
+    margin-right: 20px;
+}
+
+.menu-mobile {
+    background-color: whitesmoke;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    right: -70%;
+    z-index: 999999;
+    overflow: hidden;
+    transition: 0.2s;
+}
+
+.menu-mobile.open-menu {
+    right: 0;
+    width: 70%; 
+}
+
+.menu-mobile.open-menu ~ .overlay-menu {
+    display: block;
+}
+
+.menu-mobile .btn-fechar i {
+    color: rgba(95, 158, 160, 0.678);
+    font-size: 20px;
+}
+
+.menu-mobile .btn-fechar {
+    padding: 20px 4%;
+}
+
+.menu-mobile nav ul {
+    text-align: right;
+}
+
+.menu-mobile nav ul li a {
+    color: black;
+    font-size: 20px;
+    font-weight: 300;
+    padding: 20px;
+    display: block;
+}
+
+.menu-mobile nav ul li a:hover {
+    background-color: rgba(95, 158, 160, 0.329);
+}
+
+.overlay-menu{
+    background-color: rgba(0, 0, 0, 0.212);
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 8888;
+    display: none;
+}
 
 /*ESTILO DO TOPO DO SITE*/
 section.topo-do-site{
-    padding: 40px 4%;
+    padding: 20px 4%;
 }
 
 section.topo-do-site .flex{
@@ -104,7 +219,7 @@ section.topo-do-site .flex{
 .img-topo-site img{
     width: 500px; 
     height: 500px; 
-    border-radius: 30%;
+    border-radius: 10%;
 }
 
 .topo-do-site .txt-topo-site h1{
@@ -127,7 +242,7 @@ section.topo-do-site .flex{
         top: 0;
     }
     100%{
-        top: 30px;
+        top: 15px;
     }
 }
 
@@ -144,7 +259,7 @@ section.especialidades .especialidades-box{
     color: black;
     padding: 40px;
     margin-top: 25px;
-    border-radius: 20px;
+    border-radius: 10%;
     transition: 1s;
 }
 
@@ -172,7 +287,7 @@ section.especialidades .especialidades-box h3{
 .img-sobre img{
     width: 500px; 
     height: 650px; 
-    border-radius: 15%;
+    border-radius: 10%;
 }
 
 section.sobre{
@@ -302,45 +417,74 @@ footer .line-footer p a{
 }
 
 footer .line-footer .logo-footer img{
-    width:250px;
-    height: 250px;
+    width:150px;
+    height: 150px;
     margin-top: 0;
 }
 
 /*RESPONSIVIDADE*/
 @media screen and (max-width: 1010px){
 
-    /*classes gerais*/
+    /*CLASSES GERAIS*/
+    .menu-mobile {
+        display: block; /* Esconder o menu mobile */
+    }
+    .btn-abrir-menuMobile{
+        display: block;
+    }
+
     .flex{
         flex-direction: column;
     }
+
     h2.titulo{
         font-size: 25px;
         line-height: 30px;
     }
 
-    /*cabeçalho*/
+    .menu_desktop{
+        display: none;
+    }
+
+    .linha-menu{
+        display: none;
+    }
+
+    main {
+        margin-top: 10px; /* Altura do cabeçalho fixo */
+    }
+
+    header {
+        position: relative;
+    }
+
+
+    /*HEADER DO SITE*/
+    .logo img{
+        width: 50%;
+        height: auto;
+    }
+
+    header nav.menu_desktop li{
+        display: none;
+    }
+
     .menu_desktop, .btn-contato{
         display: none;
     }
 
-    /*Topo do site*/
-
+    /*TOPO*/
     section.topo-do-site .flex{
         gap:40px;
     }
     section.topo-do-site{
-        padding: 20px 8%;
+        padding: 0px 8%;
     }
 
     .topo-do-site .txt-topo-site h1{
         font-size: 20px;
         line-height: 35px;
         line-height:25px;
-    }
-
-    header .logo img{
-        width:100%;
     }
 
     .img-topo-site img{
@@ -373,7 +517,7 @@ footer .line-footer .logo-footer img{
         text-align: center;
     }
 
-    /*ESTILO DO CONTATO*/
+    /*ESTILO DO FORMULÁRIO*/
     form{
         width:80%;
     }
